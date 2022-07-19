@@ -1,0 +1,88 @@
+.main-pane {
+    -fx-background-color: #161616;
+}
+
+.game-grid {
+    -fx-vgap: 3;
+    -fx-hgap: 3;
+    -fx-padding: 2;
+    -fx-grid-lines-visible: true;
+}
+
+.unfilled-game-cell {
+    -fx-background-image: url("../images/unfilled_game_cell.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+    -fx-border-width: 2;
+}
+
+.game-block {
+    -fx-background-image: url("../images/game_block.png");
+    -fx-background-position: center center;
+    -fx-background-repeat: no-repeat;
+    -fx-background-size: stretch;
+}
+
+.button {
+    -fx-background-color: white;
+    -fx-border: none;
+    -fx-text-fill: black;
+    -fx-text-align: center;
+    -fx-font-size: 16px;
+    -fx-margin: 4px 2px;
+    -fx-opacity: 0.6;
+    -fx-transition: 0.3s;
+    -fx-display: inline-block;
+    -fx-text-decoration: none;
+    -fx-cursor: pointer;
+}
+
+.button:hover {
+    -fx-opacity: 1
+}
+
+.button:disabled {
+    -fx-background-color: #808080;
+}
+
+.key-label {
+    -fx-text-fill: white;
+    -fx-font-size: 21px;
+    -fx-font-weight: bold;
+}
+
+.value-label {
+    -fx-text-fill: white;
+    -fx-font-size: 21px;
+}
+
+.text-field {
+    -fx-font-size: 16px;
+}
+
+.text-field:focused {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00ffff, #ff0000), white;
+}
+
+.choice-box {
+    -fx-font-size: 16;
+    -fx-background-color: transparent, white;
+}
+
+.choice-box:focused {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00ffff, #ff0000), white;
+}
+
+.spinner {
+    -fx-font-size: 16;
+    -fx-background-color: transparent, white;
+}
+
+.spinner:focused {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #00ffff, #ff0000), white;
+}
+
+.button-bar {
+    -fx-background-color: #161616;
+}

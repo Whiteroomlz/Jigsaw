@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+
+<GridPane alignment="CENTER" styleClass="main-pane" fx:id="layout"
+          xmlns="http://javafx.com/javafx/16"
+          xmlns:fx="http://javafx.com/fxml/1" fx:controller="ru.hse.jigsaw.controllers.PrimaryLayoutController">
+    <columnConstraints>
+        <ColumnConstraints percentWidth="30.0"/>
+        <ColumnConstraints percentWidth="70.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints percentHeight="100.0"/>
+    </rowConstraints>
+    <GridPane GridPane.columnIndex="0">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="15.0"/>
+            <ColumnConstraints percentWidth="70.0"/>
+            <ColumnConstraints percentWidth="15.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="5.0"/>
+            <RowConstraints percentHeight="40.1429"/>
+            <RowConstraints percentHeight="39.8571"/>
+            <RowConstraints percentHeight="10.0"/>
+            <RowConstraints percentHeight="5.0"/>
+        </rowConstraints>
+        <BorderPane GridPane.rowIndex="1" GridPane.columnIndex="1">
+            <top>
+                <VBox fx:id="menu" spacing="20.0" alignment="CENTER">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                    </padding>
+                    <Button text="Одиночная игра" fx:id="startSingleplayerGameButton" prefWidth="${menu.width}"
+                            onAction="#onGameStarted" onMouseEntered="#onMenuButtonSelected"
+                            onMouseClicked="#onMenuButtonPressed"/>
+                    <Button text="Игра по сети" fx:id="startMultiplayerGameButton" prefWidth="${menu.width}"
+                            onAction="#onMultiplayerButtonPressed" onMouseEntered="#onMenuButtonSelected"
+                            onMouseClicked="#onMenuButtonPressed"/>
+                    <Button text="Завершить игру" fx:id="endGameButton" prefWidth="${menu.width}" disable="true"
+                            onAction="#onGameOver" onMouseEntered="#onMenuButtonSelected"
+                            onMouseClicked="#onMenuButtonPressed"/>
+                    <Button text="Сменить тему" prefWidth="${menu.width}" disable="true"
+                            onMouseEntered="#onMenuButtonSelected"
+                            onMouseClicked="#onMenuButtonPressed"/>
+                    <Button text="Выйти" fx:id="closeAppButton" prefWidth="${menu.width}" onAction="#onAppFinish"
+                            onMouseEntered="#onMenuButtonSelected"/>
+                </VBox>
+            </top>
+        </BorderPane>
+        <GridPane alignment="CENTER" GridPane.rowIndex="2" GridPane.columnIndex="1">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="100.0"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="15.0"/>
+                <RowConstraints percentHeight="70.0"/>
+                <RowConstraints percentHeight="15.0"/>
+            </rowConstraints>
+            <GridPane fx:id="nestGrid" alignment="CENTER" GridPane.rowIndex="1"
+                      styleClass="game-grid">
+                <columnConstraints>
+                    <ColumnConstraints percentWidth="33.3333"/>
+                    <ColumnConstraints percentWidth="33.3333"/>
+                    <ColumnConstraints percentWidth="33.3333"/>
+                </columnConstraints>
+                <rowConstraints>
+                    <RowConstraints percentHeight="33.3333"/>
+                    <RowConstraints percentHeight="33.3333"/>
+                    <RowConstraints percentHeight="33.3333"/>
+                </rowConstraints>
+            </GridPane>
+        </GridPane>
+        <BorderPane GridPane.rowIndex="3" GridPane.columnIndex="1">
+            <padding>
+                <Insets left="10.0" right="10.0"/>
+            </padding>
+            <bottom>
+                <VBox>
+                    <BorderPane>
+                        <left>
+                            <Label styleClass="key-label" text="ВСЕГО ФИГУР:"/>
+                        </left>
+                        <right>
+                            <Label styleClass="value-label" fx:id="shapesCountLabel"/>
+                        </right>
+                    </BorderPane>
+                    <BorderPane>
+                        <left>
+                            <Label styleClass="key-label" text="ВРЕМЯ:"/>
+                        </left>
+                        <right>
+                            <Label styleClass="value-label" fx:id="timeLabel"/>
+                        </right>
+                    </BorderPane>
+                </VBox>
+            </bottom>
+        </BorderPane>
+    </GridPane>
+    <GridPane alignment="CENTER" GridPane.columnIndex="1">
+        <columnConstraints>
+            <ColumnConstraints percentWidth="5.0"/>
+            <ColumnConstraints percentWidth="90.0"/>
+            <ColumnConstraints percentWidth="5.0"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints percentHeight="5.0"/>
+            <RowConstraints percentHeight="90.0"/>
+            <RowConstraints percentHeight="5.0"/>
+        </rowConstraints>
+        <GridPane fx:id="mainGrid" alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1"
+                  styleClass="game-grid">
+            <columnConstraints>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+                <ColumnConstraints percentWidth="11.1111"/>
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+                <RowConstraints percentHeight="11.1111"/>
+            </rowConstraints>
+        </GridPane>
+    </GridPane>
+</GridPane>
